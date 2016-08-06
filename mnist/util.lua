@@ -4,9 +4,7 @@
 --                      Feb. 2016, Israel Malkin & Yasumasa Miyamoto
 ----------------------------------------------------------------------
 
---[[ HELPER FUNCTIONS ]]--
-
------------------------------------------------------------
+--[[ HELPER FUNCTIONS ]]-----------------------------------
 -- Count the number of samples for each class.
 --
 -- Args:
@@ -28,11 +26,7 @@ function count(arr)
     return freq    
 end
 
-
-
---[[ DATA AUGMENTATION ]]--
-
------------------------------------------------------------
+--[[ DATA AUGMENTATION ]]----------------------------------
 -- Preprocess single image with the specified instructions.
 -- Scale to 28x28 -> crop to 24x24 -> rotate ± π/4 -> scale
 -- to 20x20.
@@ -43,7 +37,6 @@ end
 --     x: Userdata, transformed image data (20x20)
 --
 -----------------------------------------------------------
-
 function transform_1(x_)
     -- assume input is 32x32
     local x = x_
@@ -64,7 +57,6 @@ function transform_1(x_)
     return pad:forward(x)
 end
 
-
 -----------------------------------------------------------
 -- Preprocess single image with the specified instructions.
 -- Scale to 28x28 -> crop to 24x24 -> rotate ± π/4
@@ -75,7 +67,6 @@ end
 --     x: Userdata, transformed image data
 --
 -----------------------------------------------------------
-
 function transform_2(x_)
     -- assume input is 32x32
     local x = x_
@@ -95,7 +86,6 @@ function transform_2(x_)
     return pad:forward(x)
 end
 
-
 -----------------------------------------------------------
 -- Preprocess single image with the specified instructions.
 -- Scale to 28x28 -> crop to 24x24 -> rotate ± π/4
@@ -106,7 +96,6 @@ end
 --     x: Userdata, transformed image data
 --
 -----------------------------------------------------------
-
 function transform_3(x_)
     -- assume input is 32x32
     local x = x_
