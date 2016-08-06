@@ -1,9 +1,11 @@
 ----------------------------------------------------------------------
 -- DS-GA 1008 Deep Learning: HW1 code by Duchess
 --
+-- Base code is here:
+--       https://github.com/torch/tutorials/tree/master/2_supervised
+--
 --                      Feb. 2016, Israel Malkin & Yasumasa Miyamoto
 ----------------------------------------------------------------------
-
 
 require 'torch'   -- torch
 require 'image'   -- for color transforms
